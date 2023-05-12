@@ -1,0 +1,9 @@
+<input
+  type="text"
+   [value]="term"
+   [placeholder]="placeholder"
+   id="searchBox"
+   class="form-control"
+   (keypress)="onKeyPress(searchBox.value)"
+   #searchBox
+>

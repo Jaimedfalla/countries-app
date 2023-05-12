@@ -1,0 +1,23 @@
+<h2>By Region</h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+      <button
+        *ngFor="let region of regions"
+        class="btn mx-2"
+        (click)="onValue(region)"
+        [ngClass]="{'btn-outline-primary':selected===region}"
+      >
+        {{region}}
+      </button>
+    </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <hr>
+    <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
+    <countries-country-table [countries]="countries"></countries-country-table>
+  </div>
+</div>
